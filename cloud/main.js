@@ -3,6 +3,7 @@ require("cloud/app.js");
 // For example:
 AV.Cloud.define("hello", function(request, response) {
   response.success("Hello world!");
+  console.log(hello);
 });
 
 AV.Cloud.define("GetInfoList", function(request, response){
