@@ -6,6 +6,15 @@ AV.Cloud.define("hello", function(request, response) {
   console.log("hello");
 });
 
+AV.Cloud.run('hello', {name: 'dennis'}, {
+  success: function(data){
+      console.log("run");
+  },
+  error: function(err){
+      //处理调用失败
+  }
+});
+
 AV.Cloud.define("GetInfoList", function(request, response){
 	var StudentId = request.params.StudentId;
 	var RequestDate = request.params.RequestDate;
